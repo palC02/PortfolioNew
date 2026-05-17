@@ -5,7 +5,7 @@ import './About.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
-  { value: '3+', label: 'Years Coding' },
+  { value: '4+', label: 'Years Coding' },
   { value: '10+', label: 'Projects Built' },
   { value: '8+', label: 'Technologies' },
   { value: '100%', label: 'Passion' },
