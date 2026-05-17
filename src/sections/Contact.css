@@ -1,0 +1,182 @@
+.contact {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact-intro {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(114,145,70,0.15);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  group: true;
+}
+.contact-link-item:hover {
+  background: rgba(114,145,70,0.08);
+  border-color: rgba(114,145,70,0.4);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(114,145,70,0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.contact-link-label {
+  display: block;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--moss);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+.contact-link-value {
+  display: block;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-arrow {
+  margin-left: auto;
+  color: rgba(114,145,70,0.4);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.contact-link-item:hover .contact-arrow {
+  transform: translateX(4px);
+  color: var(--moss);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: rgba(255,255,255,0.5);
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(114,145,70,0.2);
+  border-radius: 8px;
+  background: rgba(114,145,70,0.04);
+}
+.avail-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--moss);
+  flex-shrink: 0;
+  animation: blink 2s ease-in-out infinite;
+}
+
+/* Form */
+.contact-form-wrap {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(114,145,70,0.18);
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  resize: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--moss);
+  background: rgba(114,145,70,0.05);
+}
+
+.form-submit {
+  padding: 0.95rem 2rem;
+  background: linear-gradient(135deg, var(--forest), var(--moss));
+  border: none;
+  border-radius: 6px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(114,145,70,0.25);
+  align-self: flex-start;
+  min-width: 180px;
+}
+.form-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(114,145,70,0.4);
+}
+.form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.form-success {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--moss);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact { padding: 5rem 0; }
+}

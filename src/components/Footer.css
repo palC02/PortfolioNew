@@ -1,0 +1,117 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  background: rgba(10,14,10,0.9);
+  border-top: 1px solid rgba(114,145,70,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 4rem 2.5rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand { max-width: 280px; }
+
+.footer-logo {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.footer-logo .logo-bracket { color: var(--moss); }
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 5rem;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-nav-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--moss);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4rem;
+}
+
+.footer-nav-link {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  text-align: left;
+  padding: 0;
+}
+.footer-nav-link:hover { color: var(--moss); }
+
+.footer-divider {
+  height: 1px;
+  background: rgba(114,145,70,0.12);
+  margin-bottom: 2rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+  font-family: var(--font-mono);
+}
+.copy-name { color: var(--moss); }
+.heart { color: #e05; }
+
+.footer-stack {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-tech {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(114,145,70,0.7);
+  border: 1px solid rgba(114,145,70,0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(114,145,70,0.05);
+}
+
+@media (max-width: 768px) {
+  .footer-inner { padding: 3rem 1.5rem 2rem; }
+  .footer-top { flex-direction: column; gap: 2rem; }
+  .footer-nav { gap: 3rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
